@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+}
+
+.logobar {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    position: fixed;
+}
+
+.logo {
+    display: block;
+    margin: 4px auto;
+    background-color: transparent;
+    width: 171px;
+    height: 29px;
+}
+
+.section {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 20%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    left: 20%;
+    background-color: green;
+}
+
+.three {
+    left: 40%;
+    background-color: #00b3ee;
+}
+
+.four {
+    left: 60%;
+    background-color: orangered;
+}
+
+.five {
+    left: 80%;
+    background-color: yellow;
+}
+
+.card {
+    font-weight: 700;
+    border-radius: 3px;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    background-size: 100%;
+    background-position: 50% 20%;
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 20px;
+}
+
+.info {
+    padding: 5px;
+    border-radius: 3px;
+    height: 150px;
+    width: 100%;
+    background-color: #c9c9c9 ;
+    position: absolute;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: white;
+    font-size: 2px;
+}
+
+.shadow {
+    padding: 5px;
+    border-radius: 3px;
+    height: 25px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #c9c9c9;
+    position: absolute;
+}
+
+.piece {
+    height: 170px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+    .piece {
+        width:500px;
+    }
+}
+
+.title {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    background-color: transparent;
+}
+
+.selected {
+
+}
+
+.corner {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    border-top: 30px solid grey;
+    border-left: 30px solid transparent;
+}
+
+.arrow {
+    font-family: sans-serif;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    color: whitesmoke;
+    background-color: transparent;
+    transform: rotate(-45deg);
+}
+
+.info-title {
+    background-color: transparent;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.info-date {
+    font-size: 11px;
+    background-color: transparent;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+
+}
+
+.info-description {
+    padding: 2px 0 0 0;
+    font-size: 11px;
+    background-color: transparent;
+    height: 65px;
+    line-height: 16px;
+    overflow: scroll;
+    margin-bottom: 5px;
+}
+
+.continue-reading {
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #acacac;
+    position: relative;
+    margin: auto;
+    width: auto;
+    height: 30px;
+}
+
+.author {
+    background-color: transparent;
+    font-family: 'Open Sans';
+    color: #4d4d4d;
+    font-size: 10px;
+    font-weight: 700;
+    position: relative;
+    bottom: -3px;
+}
+
+.university {
+    background-color: transparent;
+    font-family: 'Open Sans';
+    color: #4d4d4d;
+    font-size: 10px;
+    font-weight: 700;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}

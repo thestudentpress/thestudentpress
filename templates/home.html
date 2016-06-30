@@ -1,0 +1,28 @@
+<div class="logobar">
+    <img class="logo" src="images/logo.png">
+    <div class="section one"></div>
+    <div class="section two"></div>
+    <div class="section three"></div>
+    <div class="section four"></div>
+    <div class="section five"></div>
+</div>
+<div style="height:40px"></div>
+<div class="piece" *ngFor="let piece of pieces">
+    <div class="shadow">
+        <p class="author">{{piece.author}}, for "{{piece.publication}}"</p>
+        <p class="university">{{piece.school}}</p>
+    </div>
+    <div class="card" (click)="cardSelect(piece)" [style.background-image]=imageURL(piece)>
+        <!--<div class="corner" *ngIf="!piece.local"></div>-->
+        <!--<div class="arrow" *ngIf="!piece.local">➥</div>-->
+        <span class="title">{{piece.title}}</span>
+    </div>
+    <div class="info" (click)="cardSelect(piece)" *ngIf="piece == currentPiece">
+        <div class="info-title">{{piece.title}}</div>
+        <div class="info-date">{{piece.date}}</div>
+        <div class="info-description">{{piece.description}}</div>
+        <a [href]="piece.link">
+            <div class="continue-reading">Continue reading at "{{piece.publication}}"</div>
+        </a>
+    </div>
+</div>
