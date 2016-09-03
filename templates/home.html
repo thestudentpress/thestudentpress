@@ -1,28 +1,44 @@
-<div class="logobar">
-    <img class="logo" src="images/logo.png">
-    <div class="section one"></div>
-    <div class="section two"></div>
-    <div class="section three"></div>
-    <div class="section four"></div>
-    <div class="section five"></div>
-</div>
-<div style="height:40px"></div>
-<div class="piece" *ngFor="let piece of pieces">
-    <div class="shadow">
-        <p class="author">{{piece.author}}, for "{{piece.publication}}"</p>
-        <p class="university">{{piece.school}}</p>
+<div style="height:50px"></div>
+
+<div id="pieces-container">
+    <div id="dual">
+    <div class="piece-container" *ngFor="let piece of pieces, let n = index" [class]="classNumber(n)">
+        <div class="single">
+
+        <!--<div class="shadow">-->
+            <!--<p class="author" *ngIf="piece.isInternal()">{{piece.author}}</p>-->
+            <!--<p class="author" *ngIf="!piece.isInternal()">{{piece.author}}, for "{{piece.publication}}"</p>-->
+            <!--<p class="school">{{piece.school}}</p>-->
+        <!--</div>-->
+
+
+        <div class="card" (click)="cardSelect(piece)" [style.background-image]="imageURL(piece)">
+            <!--<div class="corner" *ngIf="!piece.local"></div>-->
+            <!--<div class="arrow" *ngIf="!piece.local">➥</div>-->
+            <div id="text-shadow">
+            <span class="title">{{piece.title}}</span>
+            <span class="author">{{piece.author}}, for "{{piece.publication}}"</span>
+            </div>
+
+        </div>
+            <div class="info" (click)="cardSelect(piece)" *ngIf="piece == currentPiece">
+                <div class="info-title">{{piece.title}}</div>
+                <div class="info-date">{{piece.date}}</div>
+                <div class="info-author">{{piece.author}} for "{{piece.publication}}"</div>
+                <div id="info-bar"></div>
+                <div class="info-description">{{piece.description}}</div>
+                <a *ngIf="!piece.isInternal()" [href]="piece.link" target="_blank">
+                    <div class="continue-reading">Continue reading at "{{piece.publication}}"</div>
+                </a>
+                <!--<a *ngIf="piece.isInternal()" [href]="piece.id">-->
+                <!--<div class="continue-reading">Continue reading on The Student Press</div>-->
+                <!--</a>-->
+            </div>
+
+
+
+
+        </div>
     </div>
-    <div class="card" (click)="cardSelect(piece)" [style.background-image]=imageURL(piece)>
-        <!--<div class="corner" *ngIf="!piece.local"></div>-->
-        <!--<div class="arrow" *ngIf="!piece.local">➥</div>-->
-        <span class="title">{{piece.title}}</span>
-    </div>
-    <div class="info" (click)="cardSelect(piece)" *ngIf="piece == currentPiece">
-        <div class="info-title">{{piece.title}}</div>
-        <div class="info-date">{{piece.date}}</div>
-        <div class="info-description">{{piece.description}}</div>
-        <a [href]="piece.link">
-            <div class="continue-reading">Continue reading at "{{piece.publication}}"</div>
-        </a>
     </div>
 </div>

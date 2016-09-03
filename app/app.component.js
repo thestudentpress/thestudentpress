@@ -9,41 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var pieces_1 = require("./pieces");
+var app_menu_1 = require("./app.menu");
+var app_home_1 = require("./app.home");
 var AppComponent = (function () {
     function AppComponent() {
-        this.menu = false;
-        this.sectionHeight = 3;
-        this.pieces = pieces_1.PIECES;
     }
-    AppComponent.prototype.menuSelect = function () {
-        if (this.menu) {
-            this.sectionHeight = 3;
-            this.menu = false;
-            this.one = null;
-        }
-        else {
-            this.sectionHeight = 40;
-            this.menu = true;
-            this.one = "all";
-        }
-    };
-    AppComponent.prototype.cardSelect = function (piece) {
-        if (this.currentPiece == piece) {
-            this.currentPiece = null;
-        }
-        else {
-            this.currentPiece = piece;
-        }
-    };
-    AppComponent.prototype.imageURL = function (piece) {
-        return "url(images/" + piece.id + ".jpg)";
-    };
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'app',
-            templateUrl: 'templates/home.html',
-            directives: []
+            selector: "app",
+            templateUrl: "templates/app.html",
+            directives: [app_menu_1.AppMenu, app_home_1.AppHome]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

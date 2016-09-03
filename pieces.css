@@ -1,0 +1,173 @@
+#pieces-container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden; }
+  #pieces-container .piece-container {
+    height: 200px;
+    width: 310px;
+    display: inline-block;
+    margin-bottom: 15px;
+    position: relative; }
+    #pieces-container .piece-container .card {
+      font-weight: 700;
+      height: 200px;
+      width: 310px;
+      background-size: 100%;
+      background-position: 50% 20%;
+      font-family: "Open Sans";
+      color: white;
+      font-size: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 1px 1px 1px 0px #b8b8b8; }
+    #pieces-container .piece-container .info {
+      padding: 5px;
+      height: 200px;
+      width: 310px;
+      background-color: white;
+      font-family: "Open Sans";
+      font-weight: 700;
+      color: white;
+      font-size: 2px;
+      position: absolute;
+      top: 0;
+      color: black; }
+
+.shadow {
+  padding: 5px;
+  border-radius: 3px;
+  height: 25px;
+  bottom: 0;
+  width: 320px;
+  background-color: #c9c9c9; }
+
+@media screen and (min-width: 960px) {
+  ._1 {
+    margin-left: 15px; }
+
+  ._2 {
+    margin-left: 15px; } }
+@media screen and (max-width: 959px) {
+  #dual {
+    width: 635px;
+    margin: auto; }
+
+  .__0 {
+    margin-right: 15px; } }
+@media screen and (max-width: 634px) {
+  #dual {
+    width: 100%; }
+
+  .piece-container {
+    width: 100% !important; }
+
+  .single {
+    width: 310px;
+    margin: auto; } }
+#text-shadow {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  bottom: 0;
+  height: 50px;
+  padding: 10px; }
+
+.title {
+  bottom: 23px;
+  position: absolute;
+  background-color: transparent;
+  font-size: 16px; }
+
+.author {
+  position: absolute;
+  background-color: transparent;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-weight: 500;
+  bottom: 6px; }
+
+.corner {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  border-top: 30px solid grey;
+  border-left: 30px solid transparent; }
+
+.arrow {
+  font-family: sans-serif;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: -7px;
+  color: whitesmoke;
+  background-color: transparent;
+  transform: rotate(-45deg); }
+
+.info-title {
+  background-color: transparent;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  font-size: 15px; }
+
+.info-author {
+  font-size: 11px;
+  background-color: transparent;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden; }
+
+.info-date {
+  font-size: 11px;
+  background-color: transparent;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden; }
+
+#info-bar {
+  width: 95%;
+  margin: 3px auto 3px auto;
+  height: 2px;
+  background-color: red; }
+
+.info-description {
+  font-size: 11px;
+  background-color: transparent;
+  height: 95px;
+  line-height: 16px;
+  overflow: scroll;
+  margin-bottom: 5px;
+  font-weight: 500; }
+
+.continue-reading {
+  background-color: transparent;
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 300px;
+  margin: auto;
+  height: 30px;
+  font-weight: 500;
+  text-decoration: underline; }
+
+.school {
+  background-color: transparent;
+  font-family: "Open Sans";
+  color: #4d4d4d;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  right: 5px;
+  top: 8px; }
+
+.routed {
+  font-size: 300px; }
+
+a {
+  color: #4d4d4d; }
+
+/*# sourceMappingURL=pieces.css.map */
