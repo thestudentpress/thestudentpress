@@ -11,4 +11,10 @@ import { AppHome } from "./app.home"
 
 export class AppComponent {
 
+    currentCategory: String = "all";
+
+    categorySelected(option) {
+        this.currentCategory = option;
+    }
+
 }

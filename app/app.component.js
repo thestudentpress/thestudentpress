@@ -13,7 +13,11 @@ var app_menu_1 = require("./app.menu");
 var app_home_1 = require("./app.home");
 var AppComponent = (function () {
     function AppComponent() {
+        this.currentCategory = "all";
     }
+    AppComponent.prototype.categorySelected = function (option) {
+        this.currentCategory = option;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: "app",

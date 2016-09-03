@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input, SimpleChange, OnChanges, SimpleChanges} from "@angular/core";
 import {Piece, PIECES} from "./piece";
 
 @Component({
@@ -6,9 +6,25 @@ import {Piece, PIECES} from "./piece";
     templateUrl: 'templates/home.html',
 })
 
-export class AppHome {
+export class AppHome implements OnChanges {
+
+
+    ngOnChanges(changes:SimpleChanges):void {
+        console.log(changes['currentCategory'].currentValue);
+        if (changes['currentCategory'].currentValue == changes['currentCategory'].previousValue) {
+            return
+        }
+        if (changes['currentCategory'].currentValue == 'all') {
+            this.pieces = PIECES;
+        }
+        else {
+            this.pieces = PIECES.filter(piece => this.currentCategory == "all" || piece.category == this.currentCategory);
+        }
+    }
 
     currentPiece: Piece;
+
+    @Input() currentCategory: String = "all";
 
     one: String;
 
@@ -16,7 +32,7 @@ export class AppHome {
 
     sectionHeight: Number = 3;
 
-    pieces: Piece[] = PIECES;
+    pieces: Piece[] = PIECES
 
     menuSelect() {
         if (this.menu) {
@@ -30,6 +46,7 @@ export class AppHome {
             this.one = "all"
         }
     }
+
 
     cardSelect(piece: Piece) {
         if (this.currentPiece == piece) {

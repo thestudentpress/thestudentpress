@@ -12,10 +12,24 @@ var core_1 = require("@angular/core");
 var piece_1 = require("./piece");
 var AppHome = (function () {
     function AppHome() {
+        this.currentCategory = "all";
         this.menu = false;
         this.sectionHeight = 3;
         this.pieces = piece_1.PIECES;
     }
+    AppHome.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        console.log(changes['currentCategory'].currentValue);
+        if (changes['currentCategory'].currentValue == changes['currentCategory'].previousValue) {
+            return;
+        }
+        if (changes['currentCategory'].currentValue == 'all') {
+            this.pieces = piece_1.PIECES;
+        }
+        else {
+            this.pieces = piece_1.PIECES.filter(function (piece) { return _this.currentCategory == "all" || piece.category == _this.currentCategory; });
+        }
+    };
     AppHome.prototype.menuSelect = function () {
         if (this.menu) {
             this.sectionHeight = 3;
@@ -42,6 +56,10 @@ var AppHome = (function () {
     AppHome.prototype.classNumber = function (n) {
         return "piece-container _" + n % 3 + " __" + n % 2;
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], AppHome.prototype, "currentCategory", void 0);
     AppHome = __decorate([
         core_1.Component({
             selector: 'home',

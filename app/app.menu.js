@@ -11,7 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var AppMenu = (function () {
     function AppMenu() {
+        this.categorySelected = new core_1.EventEmitter();
+        this.menuActive = false;
     }
+    AppMenu.prototype.onMenuClick = function () {
+        this.menuActive = !this.menuActive;
+    };
+    AppMenu.prototype.onMenuSelect = function (option) {
+        this.categorySelected.emit(option);
+        this.menuActive = false;
+    };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], AppMenu.prototype, "categorySelected", void 0);
     AppMenu = __decorate([
         core_1.Component({
             selector: 'menu',

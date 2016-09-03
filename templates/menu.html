@@ -1,14 +1,23 @@
 <div id="bar-container">
     <div id="menubar">
+        <div id="category-dropdown" (click)="onMenuClick()">☰</div>
         <div id="logo">
             <img id="image-logo" src="images/logo.png">
         </div>
     </div>
-    <div id="categorybar">
+    <div id="categorybar" *ngIf="!menuActive">
             <div id="one"></div>
             <div id="two"></div>
             <div id="three"></div>
             <div id="four"></div>
             <div id="five"></div>
+    </div>
+    <div id="activemenu" *ngIf="menuActive">
+        <div (click)="onMenuSelect('art')" class="menu-item" id="menu-art">Art</div>
+        <div (click)="onMenuSelect('culture')" class="menu-item" id="menu-culture">Culture</div>
+        <div (click)="onMenuSelect('opinion')" class="menu-item" id="menu-opinion">Opinion</div>
+        <div (click)="onMenuSelect('politics')" class="menu-item" id="menu-politics">Politics</div>
+        <div (click)="onMenuSelect('technology')" class="menu-item" id="menu-technology">Technology</div>
+        <div (click)="onMenuSelect('all')" class="menu-item" id="menu-all">All</div>
     </div>
 </div>

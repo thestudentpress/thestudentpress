@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Output, EventEmitter} from "@angular/core";
 
 @Component({
     selector: 'menu',
@@ -7,4 +7,16 @@ import {Component} from "@angular/core";
 
 export class AppMenu {
 
+    @Output() categorySelected = new EventEmitter();
+
+    menuActive: Boolean = false;
+
+    onMenuClick() {
+        this.menuActive = !this.menuActive;
+    }
+
+    onMenuSelect(option) {
+        this.categorySelected.emit(option);
+        this.menuActive = false;
+    }
 }
