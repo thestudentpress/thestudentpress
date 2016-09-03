@@ -31,7 +31,7 @@ export class AppHome implements OnChanges {
     menu: Boolean = false;
 
     sectionHeight: Number = 3;
-    
+
     pieces: Piece[] = PIECES;
 
     // menuSelect() {
