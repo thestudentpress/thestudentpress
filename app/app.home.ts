@@ -31,21 +31,21 @@ export class AppHome implements OnChanges {
     menu: Boolean = false;
 
     sectionHeight: Number = 3;
+    
+    pieces: Piece[] = PIECES;
 
-    pieces: Piece[] = PIECES
-
-    menuSelect() {
-        if (this.menu) {
-            this.sectionHeight = 3;
-            this.menu = false;
-            this.one = null;
-        }
-        else {
-            this.sectionHeight = 40;
-            this.menu = true;
-            this.one = "all"
-        }
-    }
+    // menuSelect() {
+    //     if (this.menu) {
+    //         this.sectionHeight = 3;
+    //         this.menu = false;
+    //         this.one = null;
+    //     }
+    //     else {
+    //         this.sectionHeight = 40;
+    //         this.menu = true;
+    //         this.one = "all"
+    //     }
+    // }
 
 
     cardSelect(piece: Piece) {

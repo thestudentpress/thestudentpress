@@ -30,18 +30,18 @@ var AppHome = (function () {
             this.pieces = piece_1.PIECES.filter(function (piece) { return _this.currentCategory == "all" || piece.category == _this.currentCategory; });
         }
     };
-    AppHome.prototype.menuSelect = function () {
-        if (this.menu) {
-            this.sectionHeight = 3;
-            this.menu = false;
-            this.one = null;
-        }
-        else {
-            this.sectionHeight = 40;
-            this.menu = true;
-            this.one = "all";
-        }
-    };
+    // menuSelect() {
+    //     if (this.menu) {
+    //         this.sectionHeight = 3;
+    //         this.menu = false;
+    //         this.one = null;
+    //     }
+    //     else {
+    //         this.sectionHeight = 40;
+    //         this.menu = true;
+    //         this.one = "all"
+    //     }
+    // }
     AppHome.prototype.cardSelect = function (piece) {
         if (this.currentPiece == piece) {
             this.currentPiece = null;
