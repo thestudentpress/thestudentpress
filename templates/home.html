@@ -3,7 +3,7 @@
 <div id="pieces-container">
     <div id="dual">
     <div class="piece-container" *ngFor="let piece of pieces, let n = index" [class]="classNumber(n)">
-        <div class="single">
+        <div class="single" [style.border-color]="categoryColor(piece.category)">
 
         <!--<div class="shadow">-->
             <!--<p class="author" *ngIf="piece.isInternal()">{{piece.author}}</p>-->

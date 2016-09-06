@@ -42,6 +42,23 @@ var AppHome = (function () {
     //         this.one = "all"
     //     }
     // }
+    AppHome.prototype.categoryColor = function (category) {
+        if (category == "art") {
+            return "red";
+        }
+        if (category == "culture") {
+            return "green";
+        }
+        if (category == "opinion") {
+            return "#00b3ee";
+        }
+        if (category == "politics") {
+            return "orangered";
+        }
+        if (category == "technology") {
+            return "yellow";
+        }
+    };
     AppHome.prototype.cardSelect = function (piece) {
         if (this.currentPiece == piece) {
             this.currentPiece = null;

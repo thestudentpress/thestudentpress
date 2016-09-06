@@ -47,6 +47,24 @@ export class AppHome implements OnChanges {
     //     }
     // }
 
+    categoryColor(category: String) {
+        if (category == "art") {
+            return "red"
+        }
+        if (category == "culture") {
+            return "green"
+        }
+        if (category == "opinion") {
+            return "#00b3ee"
+        }
+        if (category == "politics") {
+            return "orangered"
+        }
+        if (category == "technology") {
+            return "yellow"
+        }
+    }
+
 
     cardSelect(piece: Piece) {
         if (this.currentPiece == piece) {

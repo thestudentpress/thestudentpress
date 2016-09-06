@@ -21,9 +21,11 @@
       font-size: 20px
       overflow: hidden
       position: relative
-      box-shadow: 1px 1px 1px 0px rgba(184,184,184,1)
+    //box-shadow: 1px 1px 1px 0px rgba(184,184,184,1)
     .info
-      padding: 5px
+      padding-top: 10px
+      padding-right: 15px
+      padding-left: 15px
       height: 200px
       width: 310px
       background-color: white
@@ -35,6 +37,7 @@
       top: 0
       color: black
 
+
 .shadow
   padding: 5px
   border-radius: 3px
@@ -42,6 +45,11 @@
   bottom: 0
   width: 320px
   background-color: #c9c9c9
+
+.single
+  border-bottom: solid
+  border-width: 2px
+  border-color: red
 
 
 @media screen and (min-width: 960px)
@@ -88,7 +96,7 @@
   background-color: transparent
   font-family: 'Open Sans'
   font-size: 11px
-  font-weight: 500
+  font-weight: 400
   bottom: 6px
 
 .corner
@@ -115,26 +123,31 @@
   line-height: 20px
   overflow: hidden
   font-size: 15px
+  font-weight: 600
 
 .info-author
-  font-size: 11px
+  font-size: 10px
   background-color: transparent
   height: 16px
   line-height: 16px
   overflow: hidden
+  font-weight: 400
+
 
 .info-date
-  font-size: 11px
+  font-size: 10px
   background-color: transparent
   height: 16px
   line-height: 16px
   overflow: hidden
+  font-weight: 400
+
 
 #info-bar
   width: 100%
   margin: 3px auto 3px auto
-  height: 1px
-  background-color: black
+  height: .5px
+  background-color: lightgray
 
 .info-description
   font-size: 11px
@@ -156,12 +169,12 @@
   font-size: 12px
   line-height: 30px
   position: absolute
-  bottom: 5px
+  bottom: 0px
   left: 5px
   width: 300px
   margin: auto
   height: 30px
-  font-weight: 500
+  font-weight: 400
   text-decoration: underline
 
 .school
