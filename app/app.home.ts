@@ -60,7 +60,7 @@ export class AppHome implements OnChanges {
         if (category == "politics") {
             return "orangered"
         }
-        if (category == "technology") {
+        if (category == "world") {
             return "yellow"
         }
     }

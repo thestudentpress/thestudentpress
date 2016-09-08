@@ -55,7 +55,7 @@ var AppHome = (function () {
         if (category == "politics") {
             return "orangered";
         }
-        if (category == "technology") {
+        if (category == "world") {
             return "yellow";
         }
     };
