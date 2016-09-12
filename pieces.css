@@ -74,25 +74,26 @@
 #text-shadow {
   width: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
-  height: 50px;
-  padding: 10px; }
+  padding: 5px; }
 
 .title {
-  bottom: 23px;
-  position: absolute;
+  position: relative;
   background-color: transparent;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  width: 100%;
+  line-height: 110%;
+  float: left; }
 
 .author {
-  position: absolute;
+  position: relative;
   background-color: transparent;
   font-family: "Open Sans";
   font-size: 11px;
   font-weight: 400;
-  bottom: 6px; }
+  height: auto; }
 
 .corner {
   background-color: transparent;
@@ -162,7 +163,8 @@
   margin: auto;
   height: 30px;
   font-weight: 400;
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: initial; }
 
 .school {
   background-color: transparent;

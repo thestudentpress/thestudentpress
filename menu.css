@@ -16,27 +16,28 @@
   background-color: lightgrey;
   padding-left: 20px;
   border-left: solid;
-  border-width: 3px; }
+  border-width: 3px;
+  position: relative; }
   .menu-item:hover {
     background-color: darkgrey; }
 
 #menu-all {
-  border-color: black; }
+  border-left-color: black; }
 
 #menu-art {
-  border-color: red; }
+  border-left-color: red; }
 
 #menu-culture {
-  border-color: green; }
+  border-left-color: green; }
 
 #menu-opinion {
-  border-color: #00b3ee; }
+  border-left-color: #00b3ee; }
 
 #menu-politics {
-  border-color: orangered; }
+  border-left-color: orangered; }
 
 #menu-technology {
-  border-color: yellow; }
+  border-left-color: yellow; }
 
 #menubar {
   height: 37px;
